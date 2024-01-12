@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="848.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitness.caochtest.coachview">
+   <children>
+      <TextField fx:id="coachnameField" layoutX="104.0" layoutY="46.0" prefHeight="30.0" prefWidth="183.0" />
+      <TextField fx:id="telField" layoutX="104.0" layoutY="101.0" prefHeight="30.0" prefWidth="183.0" />
+      <TextField fx:id="coachsexField" layoutX="104.0" layoutY="158.0" prefHeight="30.0" prefWidth="183.0" />
+      <TextField fx:id="coachcnoField" layoutX="104.0" layoutY="211.0" prefHeight="30.0" prefWidth="183.0" />
+      <TextField fx:id="coursenameField" layoutX="104.0" layoutY="266.0" prefHeight="30.0" prefWidth="183.0" />
+      <TextField fx:id="searchField" layoutX="104.0" layoutY="375.0" prefHeight="30.0" prefWidth="161.0" promptText="编号，姓名，电话查询" />
+      <TableView fx:id="coachTableView" layoutX="422.0" layoutY="1.0" prefHeight="794.0" prefWidth="705.0">
+        <columns>
+          <TableColumn fx:id="coachname" prefWidth="86.0" text="教练编号" />
+            <TableColumn fx:id="coachtel" prefWidth="135.0" text="性别" />
+            <TableColumn fx:id="coachcno" prefWidth="152.0" text="电话" />
+            <TableColumn fx:id="coachsex" prefWidth="105.0" text="姓名" />
+            <TableColumn fx:id="coursename" prefWidth="226.0" text="课程编号" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#btnDel" text="删除" />
+                  <MenuItem mnemonicParsing="false" onAction="#btnEdit" text="编辑" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Label layoutX="38.0" layoutY="49.0" prefHeight="23.0" prefWidth="48.0" text="教练编号" />
+      <Label layoutX="36.0" layoutY="105.0" prefHeight="23.0" prefWidth="55.0" text="教练名" />
+      <Label layoutX="38.0" layoutY="158.0" prefHeight="30.0" prefWidth="31.0" text="性别" />
+      <Label layoutX="30.0" layoutY="214.0" prefHeight="23.0" prefWidth="48.0" text="电话" />
+      <Label layoutX="20.0" layoutY="266.0" prefHeight="38.0" prefWidth="80.0" text="所带课程号" />
+      <Button fx:id="addbutton" layoutX="104.0" layoutY="328.0" mnemonicParsing="false" onAction="#addcoach" prefHeight="30.0" prefWidth="86.0" text="新增教练" />
+      <Button fx:id="homebutton" layoutX="135.0" layoutY="430.0" mnemonicParsing="false" onAction="#searchMember" prefHeight="30.0" prefWidth="80.0" text="查询" />
+      <Button layoutX="5.0" layoutY="725.0" mnemonicParsing="false" onAction="#jumphome" text="home" />
+      <Button layoutX="60.0" layoutY="725.0" mnemonicParsing="false" onAction="#jumpmember" text="会员" />
+      <Button layoutX="104.0" layoutY="725.0" mnemonicParsing="false" onAction="#jumpcourse" text="课程" />
+      <Button layoutX="147.0" layoutY="725.0" mnemonicParsing="false" onAction="#jumpequipment" text="器材" />
+      <Pagination fx:id="pagination" layoutX="609.0" layoutY="787.0" prefHeight="53.0" prefWidth="594.0" />
+      <Button layoutX="228.0" layoutY="328.0" mnemonicParsing="false" onAction="#savecoach" prefHeight="30.0" prefWidth="55.0" text="保存" />
+   </children>
+</AnchorPane>

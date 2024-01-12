@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="848.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitness.caochtest.fellowcoach">
+    <children>
+        <TextField fx:id="searchField" layoutX="47.0" layoutY="43.0" prefHeight="30.0" prefWidth="161.0" promptText="编号，姓名，电话查询" />
+        <TableView fx:id="coachTableView" layoutX="260.0" layoutY="1.0" prefHeight="794.0" prefWidth="867.0">
+            <columns>
+                <TableColumn fx:id="coachname" prefWidth="102.0" text="教练编号" />
+                <TableColumn fx:id="coachtel" prefWidth="167.0" text="性别" />
+                <TableColumn fx:id="coachcno" prefWidth="127.0" text="电话" />
+                <TableColumn fx:id="coachsex" prefWidth="166.0" text="姓名" />
+                <TableColumn fx:id="coursename" prefWidth="304.0" text="课程编号" />
+            </columns>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#btnDel" text="删除" />
+                        <MenuItem mnemonicParsing="false" onAction="#btnEdit" text="编辑" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+        <Button fx:id="homebutton" layoutX="88.0" layoutY="94.0" mnemonicParsing="false" onAction="#searchMember" prefHeight="30.0" prefWidth="80.0" text="查询" />
+        <Button layoutX="68.0" layoutY="777.0" mnemonicParsing="false" onAction="#jumpequipment" text="器材" />
+        <Pagination fx:id="pagination" layoutX="431.0" layoutY="788.0" prefHeight="53.0" prefWidth="594.0" />
+      <Button layoutY="776.0" mnemonicParsing="false" text="返回" onAction="#jumpmemberenroll"/>
+    </children>
+</AnchorPane>

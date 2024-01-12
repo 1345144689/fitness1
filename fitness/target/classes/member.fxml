@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1247.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitness.membertest.memberview">
+   <children>
+      <TableView fx:id="memberTableView" layoutX="419.0" prefHeight="657.0" prefWidth="828.0">
+        <columns>
+          <TableColumn fx:id="membercno" prefWidth="75.0" text="编号" />
+          <TableColumn fx:id="membername" prefWidth="122.0" text="姓名" />
+            <TableColumn fx:id="membersex" prefWidth="63.0" text="性别" />
+            <TableColumn fx:id="membertel" prefWidth="184.0" text="电话号码" />
+            <TableColumn fx:id="memcoursecno" prefWidth="99.0" text="课程编号" />
+            <TableColumn fx:id="coursetimes" prefWidth="108.0" text="课程次数" />
+            <TableColumn fx:id="purchasetime" prefWidth="174.0" text="密码" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#btnDel" text="删除" />
+                  <MenuItem mnemonicParsing="false" onAction="#btnEdit" text="編輯" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <TextField fx:id="cnoField" layoutX="68.0" layoutY="62.0" prefHeight="23.0" prefWidth="89.0" />
+      <TextField fx:id="nameField" layoutX="217.0" layoutY="62.0" />
+      <TextField fx:id="telField" layoutX="89.0" layoutY="165.0" prefHeight="23.0" prefWidth="291.0" />
+      <TextField fx:id="courseField" layoutX="88.0" layoutY="216.0" prefHeight="23.0" prefWidth="291.0" />
+      <TextField fx:id="timesField" layoutX="88.0" layoutY="264.0" prefHeight="23.0" prefWidth="291.0" />
+      <Button fx:id="add" layoutX="121.0" layoutY="368.0" mnemonicParsing="false" onAction="#addNewMember" prefHeight="30.0" prefWidth="72.0" text="添加" />
+      <Label layoutX="23.0" layoutY="62.0" prefHeight="23.0" prefWidth="31.0" text="编号" />
+      <Label layoutX="171.0" layoutY="62.0" prefHeight="23.0" prefWidth="31.0" text="姓名" />
+      <Label layoutX="23.0" layoutY="169.0" text="电话号码" />
+      <Label layoutX="23.0" layoutY="220.0" prefHeight="15.0" prefWidth="48.0" text="课程编号" />
+      <Label layoutX="23.0" layoutY="268.0" text="课程次数" />
+      <Label layoutX="23.0" layoutY="321.0" text="购买时间" />
+      <Pagination fx:id="pagination" layoutX="420.0" layoutY="662.0" prefHeight="36.0" prefWidth="828.0" />
+      <TextField fx:id="dateField" layoutX="89.0" layoutY="317.0" prefHeight="23.0" prefWidth="291.0" />
+      <Button layoutX="11.0" layoutY="673.0" mnemonicParsing="false" onAction="#jumphome" text="返回" />
+      <TextField fx:id="sexField" layoutX="89.0" layoutY="121.0" prefHeight="23.0" prefWidth="291.0" />
+      <Label layoutX="27.0" layoutY="121.0" prefHeight="23.0" prefWidth="48.0" text="性别" />
+      <Button layoutX="178.0" layoutY="495.0" mnemonicParsing="false" onAction="#searchMember" prefHeight="30.0" prefWidth="66.0" text="查询" />
+      <TextField fx:id="searchField" layoutX="88.0" layoutY="422.0" prefHeight="30.0" prefWidth="284.0" promptText="编号，姓名，电话号码查询" />
+      <Button layoutX="265.0" layoutY="368.0" mnemonicParsing="false" onAction="#saveMember" prefHeight="30.0" prefWidth="66.0" text="保存" />
+   </children>
+</AnchorPane>
